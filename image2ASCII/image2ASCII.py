@@ -1,9 +1,11 @@
+
 import cv2
 import numpy as np
 import sys
 
-
-img = cv2.imread('./assets/saturn2.png')
+file = sys.argv[1]
+output = sys.argv[2]
+img = cv2.imread(file)
 
 grayscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
@@ -77,7 +79,7 @@ for row in resized:
 print(pixels)
 
 
-with open ('image.txt', 'a') as file:
+with open (output, 'a') as file:
     for row in pixels:
         chars = ' '.join(i for i in row)
         file.write(chars + '\n')
