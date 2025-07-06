@@ -1,14 +1,14 @@
 import cv2
 import numpy as np
-from pynput.keyboard import Key, Controller
-from time import sleep
 import webbrowser
+
 
 firefox = webbrowser.get('firefox')
 cap = cv2.VideoCapture(0)
 last_mean = 0
 first_run = True
 process_time = 0
+
 
 while(True):
     ret, frame = cap.read()
@@ -24,9 +24,9 @@ while(True):
         continue
     if result > 0.8:
         print("Motion detected!")
-        firefox.open_new_tab('https://google.com')
+        firefox.open_new_tab('https://www.youtube.com/watch?v=53yPfrqbpkE&autoplay=1')
         break
-        
+
 
 cap.release()
 cv2.destroyAllWindows()
