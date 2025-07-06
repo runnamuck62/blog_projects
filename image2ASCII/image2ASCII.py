@@ -1,20 +1,22 @@
-
 import cv2
 import numpy as np
 import sys
 
+#input and output files
 file = sys.argv[1]
 output = sys.argv[2]
-img = cv2.imread(file)
 
+#read image file and convert to grayscale
+img = cv2.imread(file)
 grayscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
+#Scale image to 125px width
 original_height, original_width = grayscale.shape[:2]
-new_width = 125
+new_width = 175
 aspect_ratio = new_width / original_width
 new_height = int(original_height * aspect_ratio)
-
 resized = cv2.resize(grayscale, (new_width, new_height))
+
 
 pixels = []
 
@@ -76,7 +78,6 @@ for row in resized:
             
     pixels.append(row_pixels)
 
-print(pixels)
 
 
 with open (output, 'a') as file:
