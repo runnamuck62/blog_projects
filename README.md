@@ -12,10 +12,10 @@ Reads online typing speed tests and inputs the correct keys
 ### Image2ASCII
 Converts any image to ASCII art
 
-### Gif2ASCII
+### Gif2ASCII (Coming Soon)
 Converts any gif to an animated gif consisting of ASCII art
 
-### Motion Capture
+### Motion Capture (Coming Soon)
 Uses webcam to detect motion behind you and change your browser screen.
 
 
